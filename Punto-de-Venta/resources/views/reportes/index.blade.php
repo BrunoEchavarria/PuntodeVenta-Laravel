@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h1>Reportes y Estadísticas</h1>
+    <h1 class="my-4 text-center">Reportes y Estadísticas</h1>
     
     <div class="row">
         <!-- Gráfico de Compras Mensuales -->

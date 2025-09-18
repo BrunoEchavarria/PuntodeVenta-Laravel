@@ -12,6 +12,7 @@ use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\profileController;
 use App\Http\Controllers\proveedorController;
 use App\Http\Controllers\ReporteController;
+use App\Http\Controllers\ReportePdfController;
 use App\Http\Controllers\roleController;
 use App\Http\Controllers\userController;
 use App\Http\Controllers\ventaController;
@@ -48,6 +49,16 @@ Route::post('/login',[loginController::class,'login']);
 Route::get('/logout',[logoutController::class,'logout'])->name('logout');
 
 Route::resource('reportes', ReporteController::class)->only(['index']);
+
+// Reportes PDF
+Route::prefix('reportes/pdf')->group(function () {
+    Route::get('/', [ReportePdfController::class, 'index'])->name('reportes.pdf.index');
+    Route::get('/ventas', [ReportePdfController::class, 'ventasMensuales'])->name('reportes.pdf.ventas');
+    Route::get('/inventario', [ReportePdfController::class, 'inventarioStock'])->name('reportes.pdf.inventario');
+    Route::get('/top-productos', [ReportePdfController::class, 'productosMasVendidos'])->name('reportes.pdf.top-productos');
+});
+
+
 
 Route::get('/401', function () {
     return view('pages.401');
