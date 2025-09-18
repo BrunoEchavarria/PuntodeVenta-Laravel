@@ -133,15 +133,22 @@
                     <div class="sb-nav-link-icon"><i class="fa-solid fa-user-group"></i></div>
                     Proveedores
                 </a>
-                @endcan
+                @endcan      
 
                 @can('ver-reportes')
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('reportes.index') }}">
-                        <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                        Reportes
-                    </a>
-                </li>
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseReportes" aria-expanded="false" aria-controls="collapseLayouts">
+                    <div class="sb-nav-link-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                    Reportes
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                </a>
+                <div class="collapse" id="collapseReportes" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        @can('ver-reportes')
+                        <a class="nav-link" href="{{ route('reportes.index') }}">Ver</a>
+                        <a class="nav-link" href="{{ route('reportes.pdf.index') }}"><i class="fas fa-file-pdf"></i> {{ __('Reportes PDF') }}</a>
+                        @endcan
+                    </nav>
+                </div>
                 @endcan
 
                 @hasrole('administrador')
