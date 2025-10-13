@@ -262,7 +262,7 @@
     let total = 0;
 
     //Constantes
-    const impuesto = 18;
+    const impuesto = 0;
 
     function mostrarValores() {
         let dataProducto = document.getElementById('producto_id').value.split('-');

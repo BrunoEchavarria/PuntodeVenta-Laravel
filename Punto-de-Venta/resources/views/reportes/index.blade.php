@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title','Reportes y Estadísticas')
+
 @section('content')
 <div class="container">
     <h1 class="my-4 text-center">Reportes y Estadísticas</h1>
