@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','marcas')
+@section('title','Marcas')
 
 @push('css-datatable')
 <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" type="text/css">

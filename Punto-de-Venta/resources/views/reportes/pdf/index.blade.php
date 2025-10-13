@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title','Reportes PDF')
+
 @section('content')
 <div class="container">
     <h1 class="my-4 text-center">Generar Reportes PDF</h1>
