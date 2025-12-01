@@ -20,22 +20,23 @@
         <div class="container-fluid">
             <!---Marca navegación-->
             <a class="navbar-brand" href="{{route('panel')}}">
-                <img src="{{ asset('assets/img/icon.png') }}" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
-                Sistema de venta
+                <div class="d-flex align-items-center">
+                    <img style="width: 150px" src="{{ asset('assets/img/logo-system2.png') }}" alt="Logo" class="d-inline-block align-text-top me-3">
+                </div>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!----Lista de opciones del menú-->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="d-flex justify-content-end" id="navbarSupportedContent">
+                {{-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{{route('panel')}}">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Acerca de</a>
-                    </li>
-                </ul>
+                    </li> 
+                </ul> --}}
 
                 <form class="d-flex" action="{{route('login')}}" method="get">
                     <button class="btn btn-primary" type="submit">Iniciar sesión</button>
@@ -168,10 +169,8 @@
                     </svg>
                 </a>
             </section>
-            <!-- Section: Social media -->
         </div>
-        <!-- Grid container -->
-
+        
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
             © 2023 Copyright:
